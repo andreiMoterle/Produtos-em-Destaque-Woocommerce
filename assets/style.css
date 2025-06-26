@@ -1,0 +1,139 @@
+.meus-produtos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.categoria-bloco {
+    flex: 1 1 300px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px #0001;
+}
+.produtos-categoria {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.produto-item {
+    width: 140px;
+    text-align: center;
+}
+.produto-item img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+.produto-item span {
+    display: block;
+    margin: 8px 0 4px;
+    font-weight: 500;
+}
+.produto-item strong {
+    color: #000;
+    font-size: 1.1em;
+}
+
+.content-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-120px);
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s cubic-bezier(.4,1.7,.7,1.2);
+    z-index: 1;
+}
+
+.content-block.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    position: relative;
+    z-index: 2;
+}
+
+.pd-categorias-tabs {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.pd-categorias-list .elementor-icon-list-item {
+    transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+    border-radius: 6px;
+    padding: 4px 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.pd-categorias-list .elementor-icon-list-item.active,
+.pd-categorias-list .elementor-icon-list-item:hover {
+    background: #e6007e;
+    color: #fff;
+    box-shadow: 0 2px 8px #e6007e33;
+    font-weight: bold;
+    transform: scale(1.08);
+}
+
+.pd-categorias-list .elementor-icon-list-item.active .elementor-icon-list-text,
+.pd-categorias-list .elementor-icon-list-item:hover .elementor-icon-list-text {
+    color: #fff;
+}
+
+.pd-categorias-list .elementor-icon-list-item .elementor-icon-list-text {
+    transition: color 0.3s;
+}
+
+/* Garante que o container dos blocos tenha altura mínima para evitar "pulo" */
+.pd-categorias-content {
+    position: relative;
+    min-height: 300px;
+}
+
+.list-products{
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width:1050px) {
+    .list-products{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .list-products{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+.list-products a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-products li{
+    list-style: none;
+}
+
+.list-products .price{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.list-products .woocommerce-loop-product__title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+
+.list-products .woocommerce-Price-amount{
+    color: #020202;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: .5
+}
