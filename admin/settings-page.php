@@ -2,7 +2,8 @@
 if (!defined('ABSPATH')) exit;
 
 add_action('admin_menu', function() {
-    add_options_page(
+    add_submenu_page(
+        'edit.php?post_type=product',
         'Produtos em Destaque',
         'Produtos em Destaque',
         'manage_options',
@@ -16,12 +17,15 @@ add_action('admin_init', function() {
     register_setting('pd_settings', 'pd_qtd_produtos');
     register_setting('pd_settings', 'pd_titulo_font_size');
     register_setting('pd_settings', 'pd_titulo_color');
+    register_setting('pd_settings', 'pd_autor_link');
 });
 
 function pd_settings_page() {
     $categorias = get_terms(['taxonomy' => 'product_cat', 'hide_empty' => false]);
     $selected = (array)get_option('pd_categorias', []);
     $qtd = intval(get_option('pd_qtd_produtos', 4));
+    $autor_link = get_option('pd_autor_link', 'https://github.com/andreiMoterle');
+
     ?>
     <div class="wrap">
         <h1>Produtos em Destaque por Categoria</h1>
