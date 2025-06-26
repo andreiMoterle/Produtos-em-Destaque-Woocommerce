@@ -163,13 +163,6 @@
     opacity: .5
 }
 
-.list-products .price bdi{
-    color: #020202;
-    font-size: 16px;
-    font-weight: 400;
-    opacity: .5
-}
-
 .list-products img{
     border-radius: 5px !important;
 }
