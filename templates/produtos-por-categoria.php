@@ -52,7 +52,6 @@
                             }
                             ?>
                         </a>
-                        <?php woocommerce_template_loop_add_to_cart(); ?>
                     </li>
                 <?php endwhile; wp_reset_postdata(); ?>
             </ul>

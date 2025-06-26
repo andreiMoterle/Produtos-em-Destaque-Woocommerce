@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Produtos em Destaque por Categoria
  * Description: Exibe produtos do WooCommerce por categoria, com seleção no admin.
- * Version: 1.1
+ * Version: 1.21
  * Author: Andrei Moterle
  * Author URI: https://github.com/andreiMoterle
  */

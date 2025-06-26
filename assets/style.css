@@ -41,7 +41,7 @@
 .seletorColecoes{
     position: relative;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto !important;
     align-items: center;
     justify-content: center;
 }
@@ -62,7 +62,8 @@
 }
 
 .seletorColecoes li{
-    position: relative;
+    position: relative !important;
+    margin: 0 !important;
 }
 
 .seletorColecoes li::before{
@@ -115,7 +116,8 @@
 
 .list-products{
     grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    gap: 20px !important;
+    padding: 0 !important;
 }
 
 @media screen and (max-width:1050px) {
@@ -145,6 +147,7 @@
     color: #000;
     font-size: 20px;
     font-weight: 600;
+    text-align: center;
 }
 
 .list-products .woocommerce-loop-product__title{
@@ -153,7 +156,14 @@
     color: #000;
 }
 
-.list-products .woocommerce-Price-amount{
+.list-products del span bdi{
+    color: #020202;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: .5
+}
+
+.list-products .price bdi{
     color: #020202;
     font-size: 16px;
     font-weight: 400;
@@ -161,19 +171,24 @@
 }
 
 .list-products img{
-    border-radius: 10px;
+    border-radius: 5px !important;
 }
 
 .seeAllButton{
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    background: #000;
-    border-radius: 3px;
+    background: #000 !important;
+    border-radius: 3px !important;
     color: #fff;
-    font-size: 15px;
+    font-size: 15px !important;
     line-height: 1;
-    padding: 12px 24px;
+    padding: 12px 24px !important;
     width: fit-content;
     margin: 0 auto;
+}
+
+.preco-parcelado-listagem bdi {
+    color: #000 !important;
+    opacity: 1 !important;
 }
