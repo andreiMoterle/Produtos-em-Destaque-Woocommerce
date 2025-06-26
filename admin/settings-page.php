@@ -14,6 +14,8 @@ add_action('admin_menu', function() {
 add_action('admin_init', function() {
     register_setting('pd_settings', 'pd_categorias');
     register_setting('pd_settings', 'pd_qtd_produtos');
+    register_setting('pd_settings', 'pd_titulo_font_size');
+    register_setting('pd_settings', 'pd_titulo_color');
 });
 
 function pd_settings_page() {
@@ -43,10 +45,29 @@ function pd_settings_page() {
                         <input type="number" name="pd_qtd_produtos" value="<?php echo esc_attr($qtd); ?>" min="1" max="20">
                     </td>
                 </tr>
+                <tr>
+                    <th>Tamanho da fonte do título (px)</th>
+                    <td>
+                        <input type="number" name="pd_titulo_font_size" placeholder="10-50" value="<?php echo esc_attr(get_option('pd_titulo_font_size', 20)); ?>" min="10" max="50">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Cor do título</th>
+                    <td>
+                        <input type="color" name="pd_titulo_color" value="<?php echo esc_attr(get_option('pd_titulo_color', '#000000')); ?>">
+                    </td>
+                </tr>
             </table>
             <?php submit_button(); ?>
         </form>
         <p>Use o shortcode <code>[produtos_destaque_categoria]</code> no Elementor ou em qualquer página.</p>
+
+        <p>
+            Plugin desenvolvido por 
+            <a href="<?php echo esc_url($autor_link); ?>" target="_blank" rel="noopener noreferrer">
+                Andrei Moterle
+            </a>
+        </p>
     </div>
     <?php
 }

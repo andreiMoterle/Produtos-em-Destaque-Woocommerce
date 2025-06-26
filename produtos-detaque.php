@@ -4,6 +4,7 @@
  * Description: Exibe produtos do WooCommerce por categoria, com seleção no admin.
  * Version: 1.1
  * Author: Andrei Moterle
+ * Author URI: https://github.com/andreiMoterle
  */
 
 if (!defined('ABSPATH')) exit;
