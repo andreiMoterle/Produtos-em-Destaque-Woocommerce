@@ -38,18 +38,34 @@
     font-size: 1.1em;
 }
 
+.pd-categorias-tabs{
+    overflow: auto;
+}
+
+.pd-categorias-tabs {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.pd-categorias-tabs::-webkit-scrollbar {
+    display: none;
+}
+
 .seletorColecoes{
     position: relative;
     width: fit-content;
     margin: 0 auto !important;
+    flex-wrap: nowrap !important;
     align-items: center;
+    padding-bottom: 30px !important;
     justify-content: center;
+    min-width: max-content;
 }
 
 .seletorColecoes::after{
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 29px;
     left: 0;
     width: 100%;
     border-bottom: 1px solid #cecece;

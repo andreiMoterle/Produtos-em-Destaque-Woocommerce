@@ -28,6 +28,12 @@ function pd_settings_page() {
 
     ?>
     <div class="wrap">
+        <?php if (isset($_GET['settings-updated']) && $_GET['settings-updated']): ?>
+            <div id="message" class="updated notice is-dismissible">
+                <p>Configurações salvas com sucesso!</p>
+            </div>
+        <?php endif; ?>
+
         <h1>Produtos em Destaque por Categoria</h1>
         <form method="post" action="options.php">
             <?php settings_fields('pd_settings'); ?>
